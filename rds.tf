@@ -14,12 +14,12 @@ resource "aws_db_instance" "default" {
   instance_class = "db.t2.micro"
   multi_az = true
   db_name = "db_1"
-  username = "naziya"
-  password = "naziya1695"
+  username = "username"
+  password = "password"
   skip_final_snapshot = true
   vpc_security_group_ids = [aws_security_group.database-sg.id]
   tags = {
-    DB_identifier= "DB-1"
+    db_identifier= "DB-1"
 
 }
 }
