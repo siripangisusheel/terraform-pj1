@@ -2,7 +2,6 @@
 resource "aws_instance" "demoinstance" {
   ami = "ami-0fa49cc9dc8d62c84"
   instance_type = "t2.2xlarge"
-  count = 1
   key_name = "tests"
   vpc_security_group_ids = ["${aws_security_group.demosg.id}"]
   subnet_id = "${aws_subnet.public-subnet-1.id}"
@@ -16,7 +15,6 @@ resource "aws_instance" "demoinstance" {
 resource "aws_instance" "demoinstance1" {
   ami = "ami-0fa49cc9dc8d62c84"
   instance_type = "t2.2xlarge"
-  count = 1
   key_name = "tests"
   vpc_security_group_ids = ["${aws_security_group.demosg.id}"]
   subnet_id = "${aws_subnet.public-subnet-2.id}"
